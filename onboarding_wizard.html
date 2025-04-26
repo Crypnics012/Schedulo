@@ -1,0 +1,315 @@
+<!-- Onboarding Wizard Screen -->
+<div class="onboarding-container">
+  <div class="progress-bar">
+    <div class="progress-step active">
+      <div class="step-number">1</div>
+      <div class="step-label">Connect Account</div>
+    </div>
+    <div class="progress-line"></div>
+    <div class="progress-step">
+      <div class="step-number">2</div>
+      <div class="step-label">Set Timezone</div>
+    </div>
+    <div class="progress-line"></div>
+    <div class="progress-step">
+      <div class="step-number">3</div>
+      <div class="step-label">Posting Rules</div>
+    </div>
+  </div>
+  
+  <div class="onboarding-card">
+    <div class="card-header">
+      <h2>Connect Your First Social Account</h2>
+      <p>Let's start by connecting one of your social media accounts to Schedulo Pro.</p>
+    </div>
+    
+    <div class="social-accounts">
+      <div class="social-account-card">
+        <div class="platform-icon instagram">
+          <img src="instagram-icon.svg" alt="Instagram" />
+        </div>
+        <h3>Instagram</h3>
+        <p>Connect your Instagram business account to schedule posts.</p>
+        <button class="btn-secondary">Connect Instagram</button>
+      </div>
+      
+      <div class="social-account-card">
+        <div class="platform-icon tiktok">
+          <img src="tiktok-icon.svg" alt="TikTok" />
+        </div>
+        <h3>TikTok</h3>
+        <p>Connect your TikTok business account to schedule videos.</p>
+        <button class="btn-secondary">Connect TikTok</button>
+      </div>
+      
+      <div class="social-account-card">
+        <div class="platform-icon twitter">
+          <img src="twitter-icon.svg" alt="Twitter/X" />
+        </div>
+        <h3>Twitter/X</h3>
+        <p>Connect your Twitter/X account to schedule tweets.</p>
+        <button class="btn-secondary">Connect Twitter/X</button>
+      </div>
+      
+      <div class="social-account-card">
+        <div class="platform-icon facebook">
+          <img src="facebook-icon.svg" alt="Facebook" />
+        </div>
+        <h3>Facebook</h3>
+        <p>Connect your Facebook page to schedule posts.</p>
+        <button class="btn-secondary">Connect Facebook</button>
+      </div>
+    </div>
+    
+    <div class="onboarding-actions">
+      <button class="btn-tertiary">Skip for now</button>
+      <button class="btn-primary" disabled>Continue</button>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Using the global styles */
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #F3F4F6; /* Gray 100 */
+    color: #374151; /* Gray 700 */
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+    color: #111827; /* Gray 900 */
+  }
+  
+  .onboarding-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 48px 24px; /* p-12 p-6 */
+  }
+  
+  .progress-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 48px; /* p-12 */
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .progress-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .step-number {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid #D1D5DB; /* Gray 300 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    margin-bottom: 8px; /* p-2 */
+    color: #6B7280; /* Gray 500 */
+  }
+  
+  .progress-step.active .step-number {
+    background-color: #6366F1; /* Indigo 500 */
+    border-color: #6366F1; /* Indigo 500 */
+    color: white;
+  }
+  
+  .step-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #6B7280; /* Gray 500 */
+  }
+  
+  .progress-step.active .step-label {
+    color: #6366F1; /* Indigo 500 */
+    font-weight: 600;
+  }
+  
+  .progress-line {
+    flex-grow: 1;
+    height: 2px;
+    background-color: #D1D5DB; /* Gray 300 */
+    z-index: 0;
+  }
+  
+  .onboarding-card {
+    background-color: white;
+    border-radius: 1rem; /* 2xl */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* md shadow */
+    padding: 32px; /* p-8 */
+    width: 100%;
+    max-width: 800px;
+  }
+  
+  .card-header {
+    text-align: center;
+    margin-bottom: 32px; /* p-8 */
+  }
+  
+  .card-header h2 {
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 8px; /* p-2 */
+  }
+  
+  .card-header p {
+    color: #6B7280; /* Gray 500 */
+    font-size: 16px;
+  }
+  
+  .social-accounts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px; /* p-4 */
+    margin-bottom: 32px; /* p-8 */
+  }
+  
+  .social-account-card {
+    border: 1px solid #E5E7EB; /* Gray 200 */
+    border-radius: 0.75rem; /* xl */
+    padding: 24px 16px; /* p-6 p-4 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  
+  .social-account-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* md shadow */
+  }
+  
+  .platform-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px; /* p-4 */
+  }
+  
+  .platform-icon.instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  }
+  
+  .platform-icon.tiktok {
+    background-color: #000000;
+  }
+  
+  .platform-icon.twitter {
+    background-color: #1DA1F2;
+  }
+  
+  .platform-icon.facebook {
+    background-color: #1877F2;
+  }
+  
+  .platform-icon img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+  }
+  
+  .social-account-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px; /* p-2 */
+  }
+  
+  .social-account-card p {
+    font-size: 14px;
+    color: #6B7280; /* Gray 500 */
+    margin-bottom: 16px; /* p-4 */
+    flex-grow: 1;
+  }
+  
+  .btn-secondary {
+    background-color: white;
+    border: 1px solid #6366F1; /* Indigo 500 */
+    color: #6366F1; /* Indigo 500 */
+    border-radius: 1rem; /* 2xl */
+    padding: 8px 16px;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    width: 100%;
+  }
+  
+  .btn-secondary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(99, 102, 241, 0.2); /* Subtle glow */
+  }
+  
+  .onboarding-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .btn-primary {
+    background-color: #6366F1; /* Indigo 500 */
+    color: white;
+    border: none;
+    border-radius: 1rem; /* 2xl */
+    padding: 12px 24px;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  
+  .btn-primary:hover:not([disabled]) {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(99, 102, 241, 0.4); /* Subtle glow */
+  }
+  
+  .btn-primary[disabled] {
+    background-color: #D1D5DB; /* Gray 300 */
+    cursor: not-allowed;
+  }
+  
+  .btn-tertiary {
+    background-color: transparent;
+    color: #6B7280; /* Gray 500 */
+    border: none;
+    padding: 12px 24px;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.15s ease-in-out;
+    border-radius: 1rem; /* 2xl */
+  }
+  
+  .btn-tertiary:hover {
+    background-color: #F3F4F6; /* Gray 100 */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 640px) {
+    .onboarding-card {
+      padding: 24px; /* p-6 */
+    }
+    
+    .social-accounts {
+      grid-template-columns: 1fr;
+    }
+    
+    .step-label {
+      display: none;
+    }
+  }
+</style>

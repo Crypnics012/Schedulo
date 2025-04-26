@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: 99, 102, 241; /* Indigo 500 */
+  --secondary: 249, 115, 22; /* Orange 500 */
+  --success: 16, 185, 129; /* Success green */
+  --error: 239, 68, 68; /* Error red */
+  --background: 255, 255, 255;
+  --foreground: 15, 23, 42;
+  --card: 255, 255, 255;
+  --card-foreground: 15, 23, 42;
+  --popover: 255, 255, 255;
+  --popover-foreground: 15, 23, 42;
+  --muted: 241, 245, 249;
+  --muted-foreground: 100, 116, 139;
+  --accent: 241, 245, 249;
+  --accent-foreground: 15, 23, 42;
+  --border: 226, 232, 240;
+  --input: 226, 232, 240;
+  --ring: 99, 102, 241;
+}
+
+.dark {
+  --background: 15, 23, 42;
+  --foreground: 248, 250, 252;
+  --card: 30, 41, 59;
+  --card-foreground: 248, 250, 252;
+  --popover: 30, 41, 59;
+  --popover-foreground: 248, 250, 252;
+  --muted: 51, 65, 85;
+  --muted-foreground: 148, 163, 184;
+  --accent: 51, 65, 85;
+  --accent-foreground: 248, 250, 252;
+  --border: 51, 65, 85;
+  --input: 51, 65, 85;
+  --ring: 99, 102, 241;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-space-grotesk font-bold;
+  }
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+  h4 {
+    @apply text-xl md:text-2xl;
+  }
+  h5 {
+    @apply text-lg md:text-xl;
+  }
+  h6 {
+    @apply text-base md:text-lg;
+  }
+  p, li, a, span, div {
+    @apply font-inter;
+  }
+}
+
+@layer components {
+  .container {
+    @apply px-4 mx-auto max-w-7xl;
+  }
+  
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary/90 px-4 py-2 rounded-lg transition-colors;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary text-white hover:bg-secondary/90 px-4 py-2 rounded-lg transition-colors;
+  }
+  
+  .card {
+    @apply bg-card text-card-foreground rounded-2xl border border-border p-6 shadow-sm;
+  }
+}

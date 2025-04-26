@@ -1,0 +1,250 @@
+<!-- Login/Signup Screen -->
+<div class="login-container">
+  <div class="login-card">
+    <div class="logo-container">
+      <img src="logo.svg" alt="Schedulo Pro Logo" />
+      <h1>Schedulo Pro</h1>
+    </div>
+    
+    <div class="tabs">
+      <button class="tab active">Login</button>
+      <button class="tab">Sign Up</button>
+    </div>
+    
+    <div class="form-container">
+      <form class="login-form">
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="your@email.com" />
+        </div>
+        
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="••••••••" />
+          <a href="#" class="forgot-password">Forgot password?</a>
+        </div>
+        
+        <button type="submit" class="btn-primary">Log In</button>
+      </form>
+      
+      <div class="social-login">
+        <p>Or continue with</p>
+        <div class="social-buttons">
+          <button class="social-btn google">
+            <img src="google-icon.svg" alt="Google" />
+          </button>
+          <button class="social-btn facebook">
+            <img src="facebook-icon.svg" alt="Facebook" />
+          </button>
+          <button class="social-btn twitter">
+            <img src="twitter-icon.svg" alt="Twitter" />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Using the global styles */
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #F3F4F6; /* Gray 100 */
+    color: #374151; /* Gray 700 */
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+    color: #111827; /* Gray 900 */
+  }
+  
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 24px; /* p-6 */
+  }
+  
+  .login-card {
+    background-color: white;
+    border-radius: 1rem; /* 2xl */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* md shadow */
+    padding: 32px; /* p-8 */
+    width: 100%;
+    max-width: 480px;
+  }
+  
+  .logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 24px; /* p-6 */
+  }
+  
+  .logo-container img {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 16px; /* p-4 */
+  }
+  
+  .logo-container h1 {
+    font-weight: 700;
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  .tabs {
+    display: flex;
+    border-bottom: 1px solid #E5E7EB; /* Gray 200 */
+    margin-bottom: 24px; /* p-6 */
+  }
+  
+  .tab {
+    background: none;
+    border: none;
+    padding: 12px 16px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #6B7280; /* Gray 500 */
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .tab.active {
+    color: #6366F1; /* Indigo 500 */
+  }
+  
+  .tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #6366F1; /* Indigo 500 */
+  }
+  
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px; /* p-6 */
+  }
+  
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px; /* p-4 */
+  }
+  
+  label {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px; /* p-2 */
+  }
+  
+  input {
+    border: 1px solid #D1D5DB; /* Gray 300 */
+    border-radius: 0.75rem; /* xl */
+    padding: 12px 16px;
+    font-size: 16px;
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: #6366F1; /* Indigo 500 */
+    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2); /* Indigo 300 ring */
+  }
+  
+  .forgot-password {
+    font-size: 14px;
+    color: #6366F1; /* Indigo 500 */
+    text-decoration: none;
+    align-self: flex-end;
+    margin-top: 8px; /* p-2 */
+  }
+  
+  .btn-primary {
+    background-color: #6366F1; /* Indigo 500 */
+    color: white;
+    border: none;
+    border-radius: 1rem; /* 2xl */
+    padding: 12px 24px;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    width: 100%;
+    margin-top: 8px; /* p-2 */
+  }
+  
+  .btn-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(99, 102, 241, 0.4); /* Subtle glow */
+  }
+  
+  .social-login {
+    text-align: center;
+  }
+  
+  .social-login p {
+    font-size: 14px;
+    color: #6B7280; /* Gray 500 */
+    margin-bottom: 16px; /* p-4 */
+    position: relative;
+  }
+  
+  .social-login p::before,
+  .social-login p::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 30%;
+    height: 1px;
+    background-color: #E5E7EB; /* Gray 200 */
+  }
+  
+  .social-login p::before {
+    left: 0;
+  }
+  
+  .social-login p::after {
+    right: 0;
+  }
+  
+  .social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px; /* p-4 */
+  }
+  
+  .social-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 0.75rem; /* xl */
+    border: 1px solid #E5E7EB; /* Gray 200 */
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  
+  .social-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .social-btn img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 640px) {
+    .login-card {
+      padding: 24px; /* p-6 */
+    }
+  }
+</style>
